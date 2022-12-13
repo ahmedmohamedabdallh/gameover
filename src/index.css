@@ -1,0 +1,225 @@
+*{
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  background-color: #131722;
+  color: #fff;
+  margin: 0;
+  padding: 0;
+}
+a{
+  color: #fff;
+  text-decoration: none;
+}
+
+nav .imgg{
+  width: 50px;
+  
+}
+.ahmed{
+  color: rgba(255, 255, 255, 0.5);
+  transition: all 0.5s;
+}
+.ahmed:hover{
+  color: #fff;
+}
+nav .nes{
+  display: flex;
+  align-items: flex-start;
+  
+}
+
+.mes{
+  background-color: #3a3f44;
+}
+.nnn{
+  background-color: #3a3f44;
+  border-color: #22241d;
+  color: #fff;
+}
+.vv{
+  width: 110%;
+}
+.bg-register-image{
+  background-image: url(commponent/img/gaming.ebaf2ffc84f4451d.jpg);
+  background-size: 100% 100%;
+}
+.gray{
+  background-color: #32383e;
+}
+.mad{
+  height: 50vh;
+}
+.myinbut{
+  background-color: #1c1e22;
+    border: 0 solid rgba(0,0,0,.6);
+    border-radius: 5px;
+    color: rgb(63, 62, 62);
+    transition: border-color .15s ease-in-out,box-shadow .15s ease-in-out;
+  appearance: none;
+  border: 1px solid #a8a8a83d;
+}
+.ahm {
+position: absolute;
+right: 10%;
+top: 5px;
+display: flex;
+}
+.mesi{
+  color: #4799eb;
+  border-color: #4799eb;
+}
+.mesi:hover{
+  color: #4799eb;
+  border-color: #4799eb;
+}
+.jumborton{
+  background: url(commponent/img/paladins.b44d33d6e7ee1ba8.png);
+  background-repeat: no-repeat;
+    background-color: #1c1e22;
+    background-position: top;
+    background-size: contain;
+    border-radius: 0.3rem;
+    margin-bottom: 1rem;
+    border: 1px solid rgba(0,0,0,.6);
+    padding: 4rem 2rem;
+}
+.blue{
+  color: #49acff
+}
+.bage-ftg{
+  color: #fff;
+    background-color: #4799eb;
+}
+.grow{
+  transition:all 0.4s;
+ cursor: pointer;
+
+}
+.card{
+  display: flex;
+  flex-direction: column;
+  min-width: 0;
+  word-wrap: break-word;
+  background-color: #32383e;
+  background-clip: border-box;
+  border: 0 solid rgba(0,0,0,.6);
+  border-radius: 0.25rem;
+}
+.grow:hover{
+transform: scale(1.1);
+}
+.card[_ngcontent-dya-c8] {
+  display: flex;
+  flex-direction: column;
+  min-width: 0;
+  word-wrap: break-word;
+  background-color: #32383e;
+  background-clip: border-box;
+  border: 0 solid rgba(0,0,0,.6);
+  border-radius: 0.25rem;
+}
+.game{
+  display: flex;
+  flex-direction: column;
+  min-width: 0;
+  word-wrap: break-word;
+  background-color: #32383e;
+  background-clip: border-box;
+  border: 0 solid rgba(0,0,0,.6);
+  border-radius: 0.25rem;
+}
+.color{
+  color:#aaa ; 
+}
+.fes{
+  background-image: linear-gradient(#4799eb,#4799eb 60%,#49acff);
+    background-repeat: no-repeat;
+    filter: none;
+    color: #fff;
+    background-color: #4799eb;
+    border-color: #4799eb;
+}
+.bvb{
+  position: sticky;
+  top: 75px;
+  z-index: 1;
+}
+.vvvv{
+  width: 21%;
+}
+.text-success {
+  color: #62c462!important;
+}
+.small, small {
+  font-size: 80%;
+}
+.offline{
+  position: fixed;
+  bottom: 30px;
+  right: 10px;
+  z-index: 555;
+}
+.likeButton{
+  border-bottom-left-radius: 5px; 
+  border-top-left-radius: 5px
+}
+.small, small {
+  font-size: 80%;
+}
+.active {
+  background-color: #1c1e22;
+  color: #7a8288;
+  border-color: #1c1e22;
+}
+@media all and (max-width: 990px) {
+  .ahm {
+    position: static;
+    display: block;
+    text-align: center;
+  }
+  .vvvv{
+    width: 80%;
+  }
+  .bvb{
+    position: initial;
+  }
+}
+
+.lds-hourglass {
+  display: inline-block;
+  position: relative;
+  width: 80px;
+  height: 80px;
+}
+.lds-hourglass:after {
+  content: " ";
+  display: block;
+  border-radius: 50%;
+  width: 0;
+  height: 0;
+  margin: 8px;
+  box-sizing: border-box;
+  border: 32px solid #fff;
+  border-color: #fff transparent #fff transparent;
+  animation: lds-hourglass 1.2s infinite;
+}
+.nbnb{
+  background-color: #7a8288;
+}
+
+@keyframes lds-hourglass {
+  0% {
+    transform: rotate(0);
+    animation-timing-function: cubic-bezier(0.55, 0.055, 0.675, 0.19);
+  }
+  50% {
+    transform: rotate(900deg);
+    animation-timing-function: cubic-bezier(0.215, 0.61, 0.355, 1);
+  }
+  100% {
+    transform: rotate(1800deg);
+  }
+}
