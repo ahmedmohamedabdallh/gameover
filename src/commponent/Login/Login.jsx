@@ -4,6 +4,7 @@ import React, { useState } from 'react'
 import { useNavigate } from 'react-router-dom';
 
 import imgee from '../img/logo.png'
+import { baseUrl } from '../../utilits/basUrl';
 
 export default function Login({saveUserData}) {
   let navigat =useNavigate();
@@ -23,7 +24,7 @@ function getUserData(e) {
   
 }
  async function sendData() {
-  let{data}=await axios.post(`https://route-movies-api.vercel.app/signin `,user)
+  let{data}=await axios.post(`https://ecommerce.routemisr.com/api/v1/auth/signin`,user)
   if (data.message=='success') {
     localStorage.setItem("userToken",data.token)
     saveUserData();

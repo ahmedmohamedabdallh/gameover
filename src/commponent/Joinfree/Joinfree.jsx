@@ -9,11 +9,11 @@ let navigat =useNavigate();
   const[erorrlist,seterorrlist]=useState([])
   const[islogin,setislogin]=useState(false)
 const[user,setuser]=useState({
-  first_name:'',
-  last_name:'',
+  name:'',
   email:'',
   password:'',
-  age:0
+  rePassword:''
+ 
 })
 function getUserData(e) {
   let myUser={...user};
@@ -22,7 +22,7 @@ function getUserData(e) {
   
 }
  async function sendData() {
-  let{data}=await axios.post(`https://route-movies-api.vercel.app/signup `,user)
+  let{data}=await axios.post(`https://ecommerce.routemisr.com/api/v1/auth/signup`,user)
   if (data.message=='success') {
     setislogin(false)
     navigat('/login')
@@ -46,11 +46,10 @@ function getUserData(e) {
   }
    function validateRegaster() {
    let schema= Joi.object({
-      first_name:Joi.string().min(3).max(10).required(),
-      last_name:Joi.string().min(3).max(10).required(),
-    age:Joi.number().min(16).max(80).required(),
+      name:Joi.string().min(3).max(10).required(),
     email:Joi.string().email({tlds:{allow:['com','net']}}).required(),
     password:Joi.string().pattern(/^[A-Z][a-z]{3,6}/).required(),
+    rePassword: Joi.any().valid(Joi.ref('password')).required(),
     });
   return  schema.validate(user,{abortEarly:false})
   }
@@ -80,21 +79,21 @@ function getUserData(e) {
         <form onSubmit={submitForm} >
    
    <div className='name d-flex '>
-   <input onChange={getUserData} placeholder='Frist Name' type="text" className='form-control myinbut mx-2 w-50 my-input my-2' name='frist_name' id='frist_name' />
+   <input onChange={getUserData} placeholder=' Name' type="text" className='form-control myinbut mx-2  my-input my-2' name='name' id='name' />
 
    
-<input onChange={getUserData} placeholder='Last Name'  type="text" className='form-control myinbut mx-2 w-50 my-input my-2' name='last_name' id='last_name' />
+{/* <input onChange={getUserData} placeholder='Last Name'  type="text" className='form-control myinbut mx-2 w-50 my-input my-2' name='last_name' id='last_name' /> */}
    </div>
    
    
-   <input onChange={getUserData} placeholder='Age' type="number" className='form-control myinbut my-input my-2' name='age' id='age' />
+   {/* <input onChange={getUserData} placeholder='Age' type="number" className='form-control myinbut my-input my-2' name='age' id='age' /> */}
 
    
    <input onChange={getUserData} placeholder='Email' type="email" className='form-control myinbut my-input my-2' name='email' id='email' />
 
    
    <input onChange={getUserData} placeholder='Password' type="password" className='form-control myinbut my-input my-2' name='password' id='password' />
-
+   <input onChange={getUserData} placeholder='rePassword' type="password" className='form-control myinbut my-input my-2' name='rePassword' id='rePassword' />
    <button type='submit' className=' btn btn-secondary w-100'>
     {islogin==true?<i className='fas fa-spinner fa-spin'></i>:'Creat Account'}
        

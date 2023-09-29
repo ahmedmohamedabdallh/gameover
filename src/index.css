@@ -153,6 +153,14 @@ transform: scale(1.1);
 .text-success {
   color: #62c462!important;
 }
+.mnm video{
+  position: relative;
+  z-index: 55;
+  top: 0;
+  left: 0;
+  height: 40px;
+  width: 50px;
+}
 .small, small {
   font-size: 80%;
 }

@@ -16,6 +16,7 @@ export default function Game({gam }) {
    <div className='game card mb-4   grow shadow rounded  '>
  <div className="img ">
    <img className='w-100' src={gam.thumbnail} alt="" />
+   
  </div>
  <div>
  <div className="gambody d-flex justify-content-between p-3 align-items-center ">

@@ -33,9 +33,7 @@ export default function Detalis() {
          getDetalis()
    },[])
    
-   
   
-
   return (
     <>
      <Helmet>
@@ -47,7 +45,12 @@ export default function Detalis() {
         <div className="row ">
             <div className="col-md-4 bvb">
               <div className='bvb'>
-              <img className='w-100' src={itemDetalis.thumbnail} alt="" />
+                <div className='position-relative mnm'>
+                <img className='w-100' src={itemDetalis.thumbnail} alt="" />
+                <video _ngcontent-hci-c16="" preload="none" muted="true" loop="" className="w-100 h-100 position-absolute top-0 start-0 zindex-fixed" src="https://www.freetogame.com/g/540/videoplayback.webm"></video>
+                </div>
+              
+
             <div className="row ">
               <div className='col-3 ms-2 col-lg-2 mr-2'>
                 <span className='btn color btn-dark  mb-3 mt-3'>FREE</span>
