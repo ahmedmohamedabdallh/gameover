@@ -46,7 +46,7 @@ function getUserData(e) {
   }
    function validateRegaster() {
    let schema= Joi.object({
-      name:Joi.string().min(3).max(10).required(),
+      name:Joi.string().min(3).max(18).required(),
     email:Joi.string().email({tlds:{allow:['com','net']}}).required(),
     password:Joi.string().pattern(/^[A-Z][a-z]{3,6}/).required(),
     rePassword: Joi.any().valid(Joi.ref('password')).required(),
