@@ -4,8 +4,6 @@ import React, { useState } from 'react'
 import { useNavigate } from 'react-router-dom';
 
 import imgee from '../img/logo.png'
-import { baseUrl } from '../../utilits/basUrl';
-
 export default function Login({saveUserData}) {
   let navigat =useNavigate();
   const[erorr,seterorr]=useState('')
